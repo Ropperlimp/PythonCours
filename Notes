@@ -1,0 +1,30 @@
+Si l'on veut écrire une chaine de caractère qui contient des caractères spéciaux (ex : un emplacement réseau avec des \)
+il faudra utiliser la fonction : print(r "c:\users\Sam\blabla\) pour que les "\" ne soient pas pris en compte pour leur
+signification premiere. C'est une fonction dite "RAW" qui affiche une string "brute".
+
+---
+Un nombre decimal doit forcément être déclaré avec un point et non avec une virgule
+ex: 10.4    /!\ Attention 10.0 est décimal même si il y a 0 à la fin !!
+
+---
+Du point de vue booléen, sont considérés comme "FAUX" les items suivants : 
+ - un nombre entier ou décimal = 0
+ - une string vide
+ - une liste ou un dictionnaire vide (ex : [] ou {})
+
+---
+On peut caster une valeur dans le type natif que l'on souhaite (str, int, float, bool...)
+ex : str(5) renvoie "5" // int("2") renvoie 2
+par contre, impossible de convertir "bonjour" avec int("bonjour") : python renvoie une erreur
+
+---
+Affectation des variables : 
+ - affectation simple -> 
+    a = 5
+    b = 6
+ - affectaction parallèle ->
+    a,b = 5,6
+ - affectation multiple -> 
+    a = b = c = 5 (les 3 variables ont la m^ valeur)
+
+---
