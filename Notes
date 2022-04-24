@@ -28,4 +28,81 @@ Affectation des variables :
     a = b = c = 5 (les 3 variables ont la m^ valeur)
 
 ---
-blablabla, c'est certain !
+La fonction input renvoie forcément un str !
+
+---
+La fonction type nous renvoie le type de variable ciblée : 
+ex : type(b)   
+>>> <class 'int'>
+
+---
+Fonction input
+
+On veut récupérer une valeur saisie par l'utilisateur : 
+nombre = input("Entrez un nombre : ")
+Entrez un nombre : 5 (par exemple)
+>>> print (nombre)
+5
+
+---
+Les méthodes : 
+
+- Modifier la casse des strings
+
+   "Bonjour".upper()
+   >>> "BONJOUR"
+   "Bonjour".lower()
+   >>> "bonjour"
+
+      /!\ Ici cette fonction s'avère utile quand on souhaite comparer 2 données.
+      En effet, si on veut comparer une saisie d'un utilisateur avec le contenu d'une page web,
+      la méthode "lower" viendra abolir la casse et permettra une recherche plus précise.
+
+   "bonjour tout le monde".capitalize()
+   >>> "Bonjour tout le monde"
+   "bonjour tout le monde".title()
+   >>> "Bonjour Tout Le Monde"
+
+ - Remplacer des éléments
+
+REPLACE   
+   "bonjour".replace("jour", "soir")
+   >>> "bonsoir"
+   "bonjour, bonjour".replace("jour", "soir")
+   >>> "bonsoir, bonsoir"
+   "bonjour bonjour".replace(" ","").replace("jour", "soir")
+   >>> "bonsoirbonsoir"
+
+STRIP 
+   Cette méthode est similaire à REPLACE mais regarde au début et à la fin de la variable
+   pour supprimer les caractères désirés (par défaut, sans arguments, elle supprime les espaces)
+
+   Les variantes lstrip et rstrip ne se concentrent réciproquement que sur les 
+   côtés gauches et droites de la chaine de caractères.
+
+   (revoir ep. 102 UDEMY pour les exemples) !
+
+SPLIT et JOIN
+   "1, 2, 3, 4, 5".split(", ")
+   >>> ['1', '2', '3', '4', '5']
+   ", ".join("1, 2, 3, 4, 5".split(", ")) -> on fait ici l'inverse avec join pour retomber sur nos pas !
+
+      /!\ La méthode JOIN possède un argument qui doit être placé au début !!
+
+ - Modifier les éléments
+
+ZFILL
+   "9".zfill(4) --> 4 est le nombre de caractères attendus
+   >>> 0009 --> On cherche ici à créer des 0 avant une str
+
+   ex : 
+   for i in range(100):
+   print(str(i).zfill(4)) /!\ zfill ne s'utilise que sur des STR !!!
+   >>> 0000
+   0001
+   0002
+   0003
+   ...
+
+
+
